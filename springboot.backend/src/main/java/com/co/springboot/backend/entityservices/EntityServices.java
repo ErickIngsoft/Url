@@ -19,7 +19,7 @@ public class EntityServices implements IURL {
 
 	public Url generateShortUrl(Url url) {
 		long l = url.getLongUrl().hashCode();
-		String shortUrl = Long.toString(l, 16).toUpperCase();
+		String shortUrl = Long.toString(l, 36).toUpperCase();
 
 		url.setShortUrl(host.concat(shortUrl));
 		Url tempUrl = setUrlToTheMap(shortUrl, url);
